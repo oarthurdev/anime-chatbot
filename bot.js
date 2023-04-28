@@ -4,7 +4,7 @@
 const { ActivityHandler, MessageFactory } = require('botbuilder');
 var request = require('request-promise-native');
 
-class EchoBot extends ActivityHandler {
+class AnimeBot extends ActivityHandler {
     constructor() {
         super();
 
@@ -22,8 +22,7 @@ class EchoBot extends ActivityHandler {
                 await context.sendActivity('Sorry, I could not find any information about that anime.');
             } else {
                 const anime = animeData.data;
-            
-                console.log(anime)
+        
                 for (const an of anime) {
                     const response = `Here is what I found about ${an.title}:\n\n` +
                             `Synopsis: ${an.synopsis}\n\n` +
@@ -57,4 +56,4 @@ class EchoBot extends ActivityHandler {
     }
 }
 
-module.exports.EchoBot = EchoBot;
+module.exports.AnimeBot = AnimeBot;
