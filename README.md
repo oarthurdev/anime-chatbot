@@ -1,4 +1,4 @@
-# teste-chatbot
+# Anime Chatbot
 
 It will return information about anime related to the user&#39;s search.
 
